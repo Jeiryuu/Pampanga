@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shalimar&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Freehand&family=Shalimar&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .logo {
+  width: 40px;
+}
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 80px;
+}
+ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Poppins", Impact, Haettenschweiler, "Arial Narrow Bold",
+    sans-serif;
+}
+nav ul li a:hover {
+  text-decoration: none;
+  color: #ff0;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.4s ease-in-out;
+}
+nav ul li a:hover:after {
+  text-decoration: none;
+  color: #ff0;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.4s ease-in-out;
+}
+.content {
+  text-align: center;
+}
+.content h1 {
+  font-size: 200px;
+  color: #ff0;
+  font-weight: 500;
+  font-family: "Freehand", cursive;
+}
+.content a {
+  text-decoration: none;
+  display: inline-block;
+  color: #000;
+  font-size: 24px;
+  border: 2px solid #000;
+  padding: 14px 70px;
+  border-radius: 50px;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  outline: none;
+}
+
+.content a:hover {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  border: 2px solid #000;
+  padding: 14px 70px;
+  border-radius: 50px;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.9s ease-in-out;
+  background: #ff0;
+  font-weight: 1000;
+}
+
+.back-vid {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+}
+
+.map {
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+  top: 6%;
+  left: 5%;
+  min-width: 90%;
+  min-height: 90%;
+  width: auto;
+  height: auto;
+  border-radius: 6px;
+}
+
+.goback {
+  width: 30px;
+  padding: 5px;
+  right: 5px;
+  padding-top: 8px;
+  padding-right: 5px;
+}
+body {
+  margin: 0;
+  background: lightgray;
+  text-align: center;
+  font-family: sans-serif;
+  color: #fefefe;
+}
+.container {
+  position: relative;
+  width: 320px;
+  margin: 100px auto 0 auto;
+  perspective: 1000px;
+}
+
+.carousel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: rotate360 60s infinite forwards linear;
+}
+.carousel__face {
+  position: absolute;
+  width: 300px;
+  height: 187px;
+  top: 20px;
+  left: 10px;
+  right: 10px;
+  background-size: cover;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+  display: flex;
+}
+
+span {
+  margin: auto;
+  font-size: 2rem;
+}
+
+.carousel__face:nth-child(1) {
+  background-image: url("arayat.jpg");
+  transform: rotateY(0deg) translateZ(430px);
+}
+.carousel__face:nth-child(2) {
+  background-image: url("death.jpg");
+  transform: rotateY(40deg) translateZ(430px);
+}
+.carousel__face:nth-child(3) {
+  background-image: url("diosdado.jpg");
+  transform: rotateY(80deg) translateZ(430px);
+}
+.carousel__face:nth-child(4) {
+  background-image: url("kamikaze.jpg");
+  transform: rotateY(120deg) translateZ(430px);
+}
+.carousel__face:nth-child(5) {
+  background-image: url("lazatin.jpg");
+  transform: rotateY(160deg) translateZ(430px);
+}
+.carousel__face:nth-child(6) {
+  background-image: url("nicolasia.jpg");
+  transform: rotateY(200deg) translateZ(430px);
+}
+.carousel__face:nth-child(7) {
+  background-image: url("pampahigh.jpg");
+  transform: rotateY(240deg) translateZ(430px);
+}
+.carousel__face:nth-child(8) {
+  background-image: url("tiburcio.jpg");
+  transform: rotateY(280deg) translateZ(430px);
+}
+.carousel__face:nth-child(9) {
+  background-image: url("train.jpg");
+  transform: rotateY(320deg) translateZ(430px);
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
+@media only screen and (min-width: 600px) {
+  .navbar,
+  .content h1 {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .navbar,
+  .content h1,
+  .container {
+    width: 100%;
+  }
+}
